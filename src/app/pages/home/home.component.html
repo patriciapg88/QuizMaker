@@ -1,0 +1,5 @@
+<div class="uk-container uk-container-medium uk-margin-small-top uk-align-center">
+  <h1 class="uk-text-center">QUIZ MAKER</h1>
+  <app-quiz-maker [categories]="categories" (sendQuestions)="emitQuestions($event)"></app-quiz-maker>
+  <app-quiz-player *ngIf="questions.length" [questionsToPlay]="questions" (completedQuiz)="submitAnswers()"></app-quiz-player>
+</div>
